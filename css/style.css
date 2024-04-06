@@ -1,0 +1,476 @@
+body{
+  background: url('../img/background.png') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  cursor: url('../favicon/pointer.cur'), auto;
+  z-index: 0;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  width: 100%;
+  height: 95px;
+  background-color: rgba(0, 0, 0, 0.726);
+  z-index: 1;
+}
+
+.bottomcontainer{
+  width: 100%;
+  height: 95px;
+  background-color: rgba(0, 0, 0, 0.726);
+}
+
+#company{
+  color: white;
+  position: relative;
+  display: flex;
+  justify-content: end;
+  right: 100px;
+  font-weight: bolder;
+  top: 6px;
+  font-family: 'Arial Black';
+}
+
+#logowebsite{
+  width: 100px;
+  height: 90px;
+  border-radius: 25%;
+  position: relative;
+  right: 200px;
+}
+
+#author{
+  color: white;
+  position: relative;
+  display: flex;
+  padding: 10px;
+  font-family: "fonts";
+}
+
+@font-face{
+  font-family: "Multiround";
+  src: url("../fonts/MultiroundPro.otf") format("truetype");
+}
+
+@font-face{
+  font-family: "fonts";
+  src: url("../fonts/DihjautiS-Regular.otf") format("truetype");
+}
+
+@font-face{
+  font-family: "klukva";
+  src: url("../fonts/klukva.otf") format("truetype");
+}
+
+.mainbuttons{
+  width: 800px;
+  position: relative;
+  left: 400px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.guarantee{
+  border: none;
+  background: none;
+  color: white;
+  font-size: 20px;
+  font-family: "Multiround";
+  cursor: url('../favicon/link.cur'), auto;
+  outline: none;
+}
+
+.catalog{
+  border: none;
+  background: none;
+  color: white;
+  font-size: 20px;
+  font-family: "Multiround";
+  cursor: url('../favicon/link.cur'), auto;
+  outline: none;
+}
+
+.support{
+  border: none;
+  background: none;
+  color: white;
+  font-size: 20px;
+  font-family: "Multiround";
+  cursor: url('../favicon/link.cur'), auto;
+  outline: none;
+}
+
+.main-content {
+  flex: 1; /* Занимает все доступное пространство, кроме footer */
+  display: flex;
+  flex-direction: column; /* Направление столбца для распределения содержимого */
+  justify-content: center; /* Центрирование содержимого по вертикали */
+  align-items: center; /* Центрирование содержимого по горизонтали */
+}
+
+.userdo{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 430px;
+  left: 75%;
+  bottom: 60%;
+}
+
+.profile{
+  border: none;
+  background: none;
+  color: white;
+  font-size: 20px;
+  font-family: "Multiround";
+  cursor: url('../favicon/link.cur'), auto;
+  position: relative;
+  bottom: 10px;
+  outline: none;
+}
+
+.cart{
+  border: none;
+  background: none;
+  color: white;
+  font-size: 20px;
+  font-family: "Multiround";
+  cursor: url('../favicon/link.cur'), auto;
+  position: relative;
+  bottom: 10px;
+  left: 10px;
+  outline: none;
+}
+
+#profilelogo{
+  width: 30px;
+  height: 30px;
+  position: relative;
+  right: 10px;
+  top: 5px;
+}
+
+#cartlogo{
+  width: 30px;
+  height: 30px;
+  position: relative;
+  right: 10px;
+  top: 5px;
+}
+
+#gallery-wrapper {
+  position: relative;
+  max-width: 800px; /* или другой желаемый размер */
+  height: 600px; /* или другой желаемый размер */
+  margin: auto;
+  overflow: hidden; /* Очень важно, чтобы содержимое не выходило за пределы */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  border-radius: 10px;
+}
+
+#gallery {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0; /* Убедитесь, что слайды позиционируются внутри #gallery */
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0; /* Начальное состояние для анимации */
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  transform: scale(1.05); /* Небольшой зум для анимации */
+}
+
+.slide.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+#prev, #next {
+  position: absolute;
+  top: 50%;
+  z-index: 100;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+#prev:hover, #next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+#prev { left: 20px; }
+#next { right: 20px; }
+
+/* Добавляем анимацию для улучшенного визуального эффекта */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Применяем анимацию к активным слайдам */
+.slide.active {
+  animation: fadeIn 1s;
+}
+
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Расстояние между карточками */
+  justify-content: center; /* Центрирование карточек в контейнере */
+  align-items: flex-start; /* Выравнивание карточек по верхнему краю */
+  padding: 20px; /* Отступ внутри контейнера */
+}
+
+.product-card {
+  width: 300px;
+  height: 450px;
+  background: linear-gradient(145deg, #e6e8fa, #fafaff);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  margin-bottom: 20px; /* Отступ снизу для каждой карточки */
+  /* Убираем абсолютное позиционирование и другие свойства, связанные с ним */
+}
+
+footer {
+  position: relative; /* Или absolute, если нужно, чтобы футер всегда прилипал к низу */
+  z-index: 2;
+  margin-top: auto; /* Автоматический верхний отступ, чтобы футер оставался внизу */
+}
+
+.modal, .dropdown-menu {
+  z-index: 100; /* Самый высокий, чтобы быть поверх всех других элементов */
+  /* Остальные стили */
+}
+
+.product-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.product-info {
+  padding: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.product-name {
+  margin: 0;
+  color: #333;
+  font-weight: bold;
+  font-family: 'Klukva';
+  font-size: 25px;
+}
+
+.product-price {
+  color: #666;
+  font-size: 20px;
+  font-family: 'Klukva';
+}
+
+.product-platforms {
+  margin-top: 10px;
+}
+
+.platform-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
+}
+
+.product-platforms i {
+  font-size: 19px;
+  margin-right: 5px;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  #gallery-wrapper {
+    max-width: 100%;
+    height: auto; /* Адаптируем высоту под мобильные устройства */
+  }
+
+  .slide img {
+    width: 100%;
+    height: auto; /* Адаптируем изображения под размер контейнера */
+  }
+}
+
+.product-add{
+  border: none;
+  background: aquamarine;
+  position: relative;
+  top: -50px;
+  left: 115px;
+  border-radius: 10px;
+  height: 30px;
+  color: black;
+  text-align: center;
+  align-items: center;
+  font-family: 'Klukva';
+  font-weight: bolder;
+  display: flex;
+  font-size: 22.5px;
+  padding: 13px;
+  cursor: url('../favicon/link.cur'), auto;
+  transition: 0.3s;
+}
+
+.product-add:hover{
+  box-shadow: 0px 0px 10px aquamarine;
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+#overlay {
+  position: fixed; /* Позиционирование относительно вьюпорта */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный цвет */
+  z-index: 1; /* Убедитесь, что оверлей находится под модальным окном */
+}
+
+#contactinfo{
+  display: none;
+  border: 2px solid white;
+  width: 500px;
+  height: 350px;
+  position: relative;
+  top: -725px;
+  left: 70vh;
+  background: rgba(255, 255, 255, 0.295);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  z-index: 10;
+  transform: (-50%, -50%);
+  transition: top 1s ease;
+  animation: slideDown 0.5s ease forwards;
+}
+
+#social a, li{
+  list-style-type: none;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  width: 100px;
+  position: relative;
+  top: 3px;
+  left: 40px;
+  cursor: url('../favicon/link.cur'), auto;
+}
+
+#logo1{
+  width: 60px;
+  height: 60px;
+  position: relative;
+  margin: 30px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between; 
+  outline: none;
+  top: -15px;
+  border-radius: 15px;
+}
+
+#support1{
+  font-family: 'Courier New';
+  color: white;
+  font-size: 20px;
+  position: relative;
+  top: 10px;
+  left: 190px;
+}
+
+#closewindow1{
+  text-decoration: none;
+  font-size: 22.5px;
+  text-align: center;
+  color: rgb(255, 226, 146);
+  border: none;
+  background: none;
+  padding-top: 1.6vh;
+  position: relative;
+  border-radius: 15.5%;
+  left: 110px;
+  width: 275px;
+  top: -30px;
+  height: 40px;
+  font-family: 'Courier New';
+  cursor: url('../favicon/link.cur'), auto;
+}
+
+#guarant{
+  display: none;
+  border: 2px solid white;
+  width: 500px;
+  height: 350px;
+  position: relative;
+  top: -725px;
+  left: 70vh;
+  background: rgba(255, 255, 255, 0.295);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  z-index: 10;
+  transform: (-50%, -50%);
+  transition: top 1s ease;
+  animation: slideDown 0.5s ease forwards;
+}
+
+#guaranttext{
+  color: white;
+  font-family: 'Klukva';
+  font-size: 30px;
+  padding: 30px;
+  position: relative;
+  left: 140px;
+}
+
+#authortext{
+  color: white;
+  font-family: 'Klukva';
+  font-size: 30px;
+  position: relative;
+  left: 90px;
+  padding-bottom: 30px;
+}

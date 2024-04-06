@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LOGIN | PAGE</title>
+  <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <p id="modal-text">Текст для удобства</p>
+    </div>
+  </div>  
+  <div class="login">
+    <div class="loginform">
+        <p id="logintxt">LOGIN | Page</p><hr>
+        <div class="username">
+            <p  id="username1">Имя пользователя</p>
+            <input type="text" id="username" placeholder="Username">
+        </div>
+        <div class="password">
+            <p id="password1">Пароль</p>
+            <input type="password" id="password" placeholder="Password">
+        </div>
+        <div class="signin"><button id="signinbtn">Войти</button></div>
+    </div>
+    <a href="../html/register.html" id="signup">У вас нет аккаунта?</a>
+</div>
+<div id="error-message" class="error-message"></div>
+<div id="successfully-message" class="successfully-message"></div>
+</body>
+<script src="../javascript/login.js"></script>
+</html>

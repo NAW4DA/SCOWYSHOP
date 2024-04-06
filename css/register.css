@@ -1,0 +1,221 @@
+body{
+  background: url('../img/backgroundlogin.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: fixed;
+  cursor: url('../favicon/pointer.cur'), auto;
+  z-index: 0;
+}
+
+.container-form{
+  background-color: rgba(0, 0, 0, 0.534);
+  backdrop-filter: blur(15px);
+  width: 900px;
+  height: 760px;
+  position: absolute;
+  border-radius: 15px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 500px black;
+  text-align: center;
+}
+
+@font-face{
+  font-family: 'Klukva';
+  src: url('../fonts/klukva.otf'), format("truetype");
+}
+
+#logintxt{
+  color: white;
+  font-size: 35px;
+  font-weight: bold;
+  font-family: 'Klukva';
+}
+
+#username1{
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'Klukva';
+}
+
+#username{
+  width: 300px;
+  height: 25px;
+  border: none;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  padding-left: 15px;
+  outline: none;
+  box-shadow: 0px 0px 10px white;
+  font-family: 'Multiround';
+  position: relative;
+  bottom: 15px;
+  color: black;
+}
+
+@font-face{
+  font-family: 'Multiround';
+  src: url('../fonts/MultiroundPro.otf'), format("truetype");
+}
+
+#password1{
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'Klukva';
+}
+
+#password{
+  width: 300px;
+  height: 25px;
+  border: none;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  padding-left: 15px;
+  outline: none;
+  box-shadow: 0px 0px 10px white;
+  font-family: 'Multiround';
+  position: relative;
+  color: black;
+  bottom: 15px;
+}
+
+#Repeatpassword1{
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'Klukva';
+  position: relative;
+  bottom: 15px;
+}
+
+#Repeatpassword{
+  width: 300px;
+  height: 25px;
+  border: none;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  padding-left: 15px;
+  outline: none;
+  box-shadow: 0px 0px 10px white;
+  font-family: 'Multiround';
+  position: relative;
+  color: black;
+  bottom: 20px;
+}
+
+#Email1{
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'Klukva';
+  position: relative;
+  bottom: 15px;
+}
+
+#Email{
+  width: 300px;
+  height: 25px;
+  border: none;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  padding-left: 15px;
+  outline: none;
+  box-shadow: 0px 0px 10px white;
+  font-family: 'Multiround';
+  position: relative;
+  bottom: 30px;
+  color: black;
+}
+
+#confirm{
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'Klukva';
+  position: relative;
+  bottom: 25px;
+}
+
+#verificationCode{
+  width: 100px;
+  height: 25px;
+  border: none;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  color: black;
+  padding-left: 15px;
+  outline: none;
+  box-shadow: 0px 0px 10px white;
+  font-family: 'Multiround';
+  position: relative;
+  bottom: 40px;
+}
+
+@keyframes gradient-animation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+#verifySendCodeBtn{
+  font-family: 'Arial Black';
+  font-size: 12.5px;
+  color: transparent;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  position: relative;
+  bottom: 40px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px white;
+  left: 15px;
+  height: 25px;
+  background: linear-gradient(90deg, #9e69ff, #70a2ff, #9e69ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-size: 200% 200%;
+  animation: gradient-animation 5s ease infinite;
+  cursor: url('../favicon/link.cur'), auto;
+}
+
+#signupbtn{
+  width: 220px;
+  height: 35px;
+  border: none;
+  border-radius: 10px;
+  cursor: url('../favicon/link.cur'), auto;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  color: rgb(0, 0, 0);
+  font-family: 'Klukva';
+  font-size: 22.5px;
+  position: relative;
+  bottom: 15px;
+  padding: 5px;
+  font-weight: bolder;
+  background-size: 200% 100%;
+  background-image: linear-gradient(to right, #ffffff 50%, #000000 50%);
+  transition: background-position 1s;
+}
+
+#signupbtn:hover{
+  background-position: 100% 0;
+  color: white;
+}
+
+#signin{
+  font-family: 'Klukva';
+  font-size: 20px;
+  color: transparent;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  position: relative;
+  bottom: 3px;
+  background: linear-gradient(90deg, #ffffff, #000000, #ffffff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-size: 200% 200%;
+  animation: gradient-animation 5s ease infinite;
+}

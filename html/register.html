@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>REGISTER | PAGE</title>
+  <link rel="stylesheet" href="/css/register.css">
+</head>
+<body>
+<div class="container-form">
+  <div class="login">
+    <p id="logintxt">Регистрация</p><hr>
+  </div>
+    <div class="loginform">
+        <div class="username">
+            <p id="username1">Имя пользователя</p>
+            <input type="text" id="username" placeholder="Username">
+        </div>
+        <div class="password">
+            <p id="password1">Пароль</p>
+            <input type="password" id="password" placeholder="Password">
+        </div>
+        <div class="Repeatpassword">
+            <p id="Repeatpassword1">Подтвердите пароль</p>
+            <input type="password" id="Repeatpassword" placeholder="Repeat password">
+        </div>
+        <div class="Email">
+            <p id="Email1">E-mail</p>
+            <input type="text" id="Email" placeholder="Email">
+        </div>
+        <div id="verification-code">
+            <p id="confirm">Код из почты</p>
+            <input type="text" id="verificationCode" placeholder="Enter Code">
+            <button id="verifySendCodeBtn">Отправить код</button>
+        </div>
+        <div class="signin"><button id="signupbtn">Регистрация</button></div>
+    </div>
+    <a href="../html/login.html" id="signin">У вас уже есть аккаунт?</a>
+  </div>
+<div class="wrong-message" style="display: none;"></div>
+<div class="green-message" style="display: none;"></div>
+</body>
+<script src="../javascript/register.js"></script>
+</html>

@@ -1,0 +1,49 @@
+body{
+  background: url('../img/invokerspecialback.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@font-face{
+  font-family: 'Klukva';
+  src: url('../fonts/klukva.otf'), format("truetype");
+}
+
+#userProfile{
+  width: 600px;
+  height: 500px;
+  border: 1px solid black;
+  position: relative;
+  top: 250px;
+  left: 35%;
+  text-align: center;
+  backdrop-filter: blur(20px);
+  color: white;
+  font-family: 'Klukva';
+  font-size: 30px;
+  border-radius: 15.5px;
+}
+
+#logoutbtn{
+  width: 220px;
+  height: 35px;
+  border: none;
+  border-radius: 10px;
+  cursor: url('../favicon/link.cur'), auto;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  color: rgb(0, 0, 0);
+  font-family: 'Klukva';
+  font-size: 22.5px;
+  padding: 5px;
+  font-weight: bolder;
+  background-size: 200% 100%;
+  background-image: linear-gradient(to right, #ffffff 50%, red 50%);
+  transition: background-position 0.5s;
+}
+
+#logoutbtn:hover{
+  background-position: 100% 0;
+  color: white;
+}
